@@ -5,8 +5,8 @@ export const Test_page = () => {
 
   useEffect(() => {
     const getMenu = () => {
-        const url = "http://localhost:8080/three"
-        // const url = "https://backend-th8h.onrender.com/three"
+        // const url = "http://localhost:8080/three"
+        const url = "https://backend-th8h.onrender.com/three"
       fetch(url)
         .then(response => response.json())
         .then(data => {
