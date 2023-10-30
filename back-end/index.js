@@ -4,7 +4,24 @@ var fs = require('fs')
 const express = require('express')
 var cors = require('cors')
 var bodyParser = require('body-parser')
+const { Client } = require('pg')
+const client = new Client({
+    user: 'csce315_902_01user',
+    host: 'csce-315-db.engr.tamu.edu',
+    database: 'csce315_902_01db',
+    password: '1234',
+    port: 8080, // Modify the port if needed
+});
 
+client.connect()
+  .then(() => {
+    console.log('Connection success');
+    // You can perform database operations here
+    client.end(); // Close the connection after using it
+  })
+  .catch((error) => {
+    console.error('Connection error:', error);
+});
 const PORT = 8080;
 
 const app = express()

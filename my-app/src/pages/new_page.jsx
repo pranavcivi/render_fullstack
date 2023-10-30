@@ -23,7 +23,7 @@ export const Test_page = () => {
 
   return (
     <pre>
-      {menuData ? menuData : "Loading..."} 
+        This is the new page
     </pre>
   );
 };
