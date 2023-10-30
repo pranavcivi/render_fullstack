@@ -4,7 +4,9 @@ var fs = require('fs')
 const express = require('express')
 var cors = require('cors')
 var bodyParser = require('body-parser')
+
 const { Client } = require('pg')
+
 const client = new Client({
     user: 'csce315_902_01user',
     host: 'csce-315-db.engr.tamu.edu',
